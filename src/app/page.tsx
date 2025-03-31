@@ -27,6 +27,24 @@ const projects = [
   }
 ];
 
+const experience = [
+  {
+    id: 1,
+    title: "Vighnotech",
+    description: "A full-stack e-commerce platform with product management, cart functionality, and payment integration.",
+    tags: ["React", "Next.js", "Prisma", "Stripe", "TypeScript"],
+    image: "/api/placeholder/400/250",
+  },
+  {
+    id: 2,
+    title: "Task Management App",
+    description: "A collaborative task management application with real-time updates and team functionality.",
+    tags: ["React", "Redux", "Firebase", "Tailwind CSS"],
+    image: "/api/placeholder/400/250",
+  },
+  
+];
+
 const skills = [
   { name: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS"] },
   { name: "Backend", items: ["Node.js", "Express", "Prisma", "MongoDB", "PostgreSQL"] },
@@ -41,15 +59,18 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col gap-6 md:gap-8">
             <h1 className="text-4xl md:text-6xl font-bold">
-              Hi, I'm <span className="text-primary">Alex</span>
+              Hi, I'm <span className="text-primary">Varsha</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl">
-              A full-stack developer passionate about building modern web applications with 
+              A full-stack Web and App developer passionate about building modern applications with 
               a focus on user experience and clean code.
             </p>
             <div className="flex gap-4">
               <Button asChild>
                 <Link href="#projects">View Projects</Link>
+              </Button>
+              <Button asChild>
+                <Link href="#experience">View Experience</Link>
               </Button>
               <Button variant="outline" asChild>
                 <Link href="/contact">Contact Me</Link>
@@ -112,6 +133,41 @@ export default function Home() {
                 <CardFooter className="p-6 pt-0">
                   <Button asChild variant="outline" className="w-full">
                     <Link href={`/projects/${project.id}`}>View Details</Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+       {/* Experience*/}
+      <section className="py-12" id="experience">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8">Experience</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {experience.map((experience) => (
+              <Card key={experience.id} className="overflow-hidden">
+                <CardHeader className="p-0">
+                  <img 
+                    src={experience.image} 
+                    alt={experience.title} 
+                    className="w-full h-48 object-cover"
+                  />
+                </CardHeader>
+                <CardContent className="p-6">
+                  <CardTitle className="mb-2">{experience.title}</CardTitle>
+                  <CardDescription>{experience.description}</CardDescription>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {experience.tags.map((tag) => (
+                      <Badge key={tag} variant="outline">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+                <CardFooter className="p-6 pt-0">
+                  <Button asChild variant="outline" className="w-full">
+                    <Link href={`/experience/${experience.id}`}>View Details</Link>
                   </Button>
                 </CardFooter>
               </Card>
