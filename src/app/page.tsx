@@ -1,57 +1,69 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
-const projects = [
-  {
-    id: 1,
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce platform with product management, cart functionality, and payment integration.",
-    tags: ["React", "Next.js", "Prisma", "Stripe", "TypeScript"],
-    image: "/api/placeholder/400/250",
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates and team functionality.",
-    tags: ["React", "Redux", "Firebase", "Tailwind CSS"],
-    image: "/api/placeholder/400/250",
-  },
-  {
-    id: 3,
-    title: "AI Content Generator",
-    description: "An AI-powered application that generates content based on user prompts and preferences.",
-    tags: ["Next.js", "OpenAI API", "MongoDB", "TypeScript"],
-    image: "/api/placeholder/400/250",
-  }
-];
 
-const experience = [
-  {
-    id: 1,
-    title: "Vighnotech",
-    description: "A full-stack e-commerce platform with product management, cart functionality, and payment integration.",
-    tags: ["React", "Next.js", "Prisma", "Stripe", "TypeScript"],
-    image: "/api/placeholder/400/250",
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates and team functionality.",
-    tags: ["React", "Redux", "Firebase", "Tailwind CSS"],
-    image: "/api/placeholder/400/250",
-  },
-  
-];
+interface Skill {
+  name: string;
+  items: string[];
+}
 
-const skills = [
-  { name: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS"] },
-  { name: "Backend", items: ["Node.js", "Express", "Prisma", "MongoDB", "PostgreSQL"] },
-  { name: "Tools", items: ["Git", "Docker", "Jest", "CI/CD", "Vercel"] },
-];
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  tags: string[];
+  image: string;
+  githubUrl: string;
+  liveUrl: string;
+}
+
+interface Experience {
+  id: number;
+  title: string;
+  description: string;
+  tags: string[];
+  image: string;
+  githubUrl: string;
+  liveUrl: string;
+}
 
 export default function Home() {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [experience, setExperience] = useState<Experience[]>([]);
+  const [skills, setSkills] = useState<Skill[]>([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const [projectsRes, experienceRes, skillsRes] = await Promise.all([
+          fetch("/api/projects"),
+          fetch("/api/experience"),
+          fetch("/api/skills"),
+        ]);
+
+        const [projectsData, experienceData, skillsData] = await Promise.all([
+          projectsRes.json(),
+          experienceRes.json(),
+          skillsRes.json(),
+        ]);
+
+        setProjects(projectsData);
+        setExperience(experienceData);
+        setSkills(skillsData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+  }, []);
+
+
   return (
     <main className="flex min-h-screen flex-col p-6 md:p-12">
       {/* Hero Section */}
