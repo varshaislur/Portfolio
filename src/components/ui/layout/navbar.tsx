@@ -6,7 +6,8 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -19,6 +20,7 @@ const routes = [
 
 export function Navbar() {
   const pathname = usePathname();
+  const { theme, setTheme } = useTheme();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-10">
@@ -43,8 +45,20 @@ export function Navbar() {
             ))}
           </nav>
           <div className="flex items-center space-x-4">
+          <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </Button>
             <Button variant="outline" asChild>
-              <a href="/api/placeholder/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="documents/resume_final.pdf" target="_blank" rel="noopener noreferrer">
                 Resume
               </a>
             </Button>
