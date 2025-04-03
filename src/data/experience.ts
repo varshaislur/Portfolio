@@ -18,7 +18,7 @@ export const experience: Experience[] = [
     description: "Developed a React-based website for MicronSolar, integrating an intuitive UI and animations.",
     longDescription: "Designed and developed a React-based product website for solar trackers called MicronSolar. The site features engaging animations, a user-friendly UI, and integrated user manuals for better product showcasing.",
     tags: ["React", "Tailwind", "Animations"],
-    image: "/api/placeholder/800/400",
+    image: "/images/micron1.png",
     githubUrl: "",
     liveUrl: "",
     features: [

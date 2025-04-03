@@ -28,8 +28,8 @@ export default function Contact() {
             </CardHeader>
             <CardContent>
               <CardDescription>
-                <a href="mailto:your.email@example.com" className="hover:underline">
-                  your.email@example.com
+                <a href="mailto:varshaislur@gmail.com" className="hover:underline">
+                  varshaislur@gmail.com
                 </a>
               </CardDescription>
             </CardContent>
@@ -44,8 +44,8 @@ export default function Contact() {
             </CardHeader>
             <CardContent>
               <CardDescription>
-                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                  github.com/yourusername
+                <a href="https://github.com/varshaislur" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                github.com/varshaislur
                 </a>
               </CardDescription>
             </CardContent>
@@ -60,8 +60,8 @@ export default function Contact() {
             </CardHeader>
             <CardContent>
               <CardDescription>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                  linkedin.com/in/yourusername
+                <a href="https://linkedin.com/in/varsha-islur-818060291" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                linkedin.com/in/varsha-islur-818060291
                 </a>
               </CardDescription>
             </CardContent>

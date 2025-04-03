@@ -36,7 +36,7 @@ export const projects: Project[] = [
   description: "An AI-powered inventory system for stock optimization and vendor alerts.",
   longDescription: "Developed an AI-powered inventory management system that analyzes past data to optimize stock levels and sends automated email alerts to vendors, reducing costs and delays. Integrated with Google Sheets and OAuth for secure inventory tracking.",
   tags: ["React", "Shadcn", "MongoDB", "Prisma", "Gemini AI"],
-  image: "/api/placeholder/800/400",
+  image: "/images/ivm2.png",
   githubUrl: "https://github.com/varshaislur/inventory-system",
   liveUrl: "",
   features: [
@@ -52,7 +52,7 @@ export const projects: Project[] = [
   description: "A real-time collaborative code editor with syntax highlighting.",
   longDescription: "Created a real-time collaborative code editor using Monaco Editor and Socket.io, enabling multiple users to code simultaneously with syntax highlighting and multi-language support.",
   tags: ["React", "Socket.io", "Monaco"],
-  image: "/api/placeholder/800/400",
+  image: "/images/mindlink1.png",
   githubUrl: "https://github.com/varshaislur/mindlink",
   liveUrl: "",
   features: [
@@ -68,7 +68,7 @@ export const projects: Project[] = [
   description: "A React-based e-commerce website with Flipkart product listings via web scraping.",
   longDescription: "Built a React-based e-commerce website featuring product listings sourced from Flipkart through web scraping. Implemented browsing, selecting, and purchasing functionalities within the React platform. Added a customer support chatbot using OpenAI API.",
   tags: ["React", "MongoDB", "BeautifulSoup", "Git"],
-  image: "/api/placeholder/800/400",
+  image: "/images/shopcart1.png",
   githubUrl: "https://github.com/varshaislur/shopcart",
   liveUrl: "",
   features: [
@@ -84,7 +84,7 @@ export const projects: Project[] = [
   description: "A full-featured MERN-based social platform for content sharing and real-time interactions.",
   longDescription: "Developed Unhinged, a MERN-based social platform incorporating user authentication, real-time posting, and content sharing to foster social interactions.",
   tags: ["React", "Tailwind", "Node.js", "Express", "MongoDB", "Git"],
-  image: "/api/placeholder/800/400",
+  image: "/images/unhinged1.png",
   githubUrl: "https://github.com/varshaislur/unhinged",
   liveUrl: "",
   features: [
