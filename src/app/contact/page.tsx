@@ -17,7 +17,7 @@ export default function Contact() {
 
     const form = e.currentTarget;
     const formData = {
-      name: form.name.value,
+      name: form.name.valueOf,
       email: form.email.value,
       subject: form.subject.value,
       message: form.message.value,
