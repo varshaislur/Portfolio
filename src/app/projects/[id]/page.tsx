@@ -91,10 +91,10 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
           </p>
           <div className="flex gap-4 mb-8">
             <Button asChild>
-              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+              <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="mr-2 h-4 w-4" />
                 Live Demo
-              </a>
+              </Link>
             </Button>
             <Button variant="outline" asChild>
               <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">

@@ -19,8 +19,8 @@ export const experience: Experience[] = [
     longDescription: "Designed and developed a React-based product website for solar trackers called MicronSolar. The site features engaging animations, a user-friendly UI, and integrated user manuals for better product showcasing.",
     tags: ["React", "Tailwind", "Animations"],
     image: "/images/micron1.png",
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/varshaislur/MicronSolar",
+    liveUrl: "https://micron-solar.vercel.app/",
     features: [
       "Intuitive UI with animations",
       "Integrated user manuals",
@@ -34,9 +34,9 @@ export const experience: Experience[] = [
     description: "Developed Wealthify, a financial tracking mobile application.",
     longDescription: "Worked on the development of Wealthify, a mobile application that enables users to comprehensively track investments and financial management. The app offers personalized investment advice aligned with long-term financial goals.",
     tags: ["React Native", "Node.js", "MongoDB"],
-    image: "/api/placeholder/800/400",
+    image: "/images/Wealthify1.png",
     githubUrl: "",
-    liveUrl: "",
+    liveUrl: "https://www.thewealthify.me/",
     features: [
       "Comprehensive investment tracking",
       "Personalized financial advice",
@@ -50,7 +50,7 @@ export const experience: Experience[] = [
     description: "Mentoring students in React Native development, guiding them through projects.",
     longDescription: "Mentoring seven students in React Native, providing guidance on best practices, project structuring, and debugging techniques to help them become proficient developers.",
     tags: ["React Native", "Mentorship", "Teaching"],
-    image: "/api/placeholder/800/400",
+    image: "/images/unicode.png",
     githubUrl: "",
     liveUrl: "",
     features: [
