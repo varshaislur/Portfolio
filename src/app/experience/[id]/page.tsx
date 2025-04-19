@@ -20,9 +20,13 @@ interface Experience {
     features: string[];
     challenges: string;
 }
+type Props = {
+  params: {
+    id: string;
+  };
+};
 
-
-export default function ExperienceDetails({ params }: { params: { id: string } }) {
+export default function ExperienceDetails({ params }: Props) {
   const [ExperienceData, setExperienceData] = useState<Experience[]>([]);
   useEffect(() => {
   async function fetchData() {
