@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Github, Linkedin, Twitter } from "lucide-react";
-import Link from "next/link";
+
 
 export function Footer() {
   return (
