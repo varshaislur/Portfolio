@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { ChevronLeft, Github, ExternalLink, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 
 export interface Project {
   id: number;
@@ -21,11 +22,14 @@ export interface Project {
   isMobileProject?: boolean; // Flag for mobile projects
 }
 
-export default function ProjectDetail({ params }: { params: { id: string } }) {
+export default function ProjectDetail() {
   const [projectsData, setProjectsData] = useState<Project[]>([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const projectId = parseInt(params.id);
+    const params = useParams();
+    const id = params.id as string; 
+  const projectId = parseInt(id);
   const project = projectsData.find((p) => p.id === projectId);
+
 
   useEffect(() => {
     async function fetchData() {

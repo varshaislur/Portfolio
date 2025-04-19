@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { ChevronLeft, Github, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 
 
 interface Experience {
@@ -22,8 +23,10 @@ interface Experience {
 }
 
 
-export default function ExperienceDetails({ params }: { params: { id: string } }) {
+export default function ExperienceDetails() {
   const [ExperienceData, setExperienceData] = useState<Experience[]>([]);
+  const params = useParams();
+  const id = params.id as string;  
   useEffect(() => {
   async function fetchData() {
     try {
@@ -49,7 +52,8 @@ export default function ExperienceDetails({ params }: { params: { id: string } }
 
   fetchData();
 }, []);
-  const experienceId = parseInt(params.id);
+
+  const experienceId = parseInt(id);
   const experience = ExperienceData.find((p) => p.id === experienceId);
 
   if (!experience) {
