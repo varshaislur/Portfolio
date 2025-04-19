@@ -1,4 +1,5 @@
 "use client"
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronLeft, Github, ExternalLink, ChevronRight } from "lucide-react";
