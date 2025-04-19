@@ -17,7 +17,7 @@ export default function Contact() {
 
     const form = e.currentTarget;
     const formData = {
-      name: form.name.valueOf,
+      name: form.name1.value,
       email: form.email.value,
       subject: form.subject.value,
       message: form.message.value,
@@ -115,10 +115,10 @@ export default function Contact() {
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
+                  <label htmlFor="name1" className="text-sm font-medium">
                     Name
                   </label>
-                  <Input id="name" name="name" placeholder="Your name" required />
+                  <Input id="name1" name="name1" placeholder="Your name" required />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium">
