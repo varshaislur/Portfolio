@@ -71,7 +71,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col gap-6 md:gap-8">
             <h1 className="text-4xl md:text-6xl font-bold">
-              Hi, I'm <span className="text-primary">Varsha</span>
+              Hi, I&apos;m <span className="text-primary">Varsha</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl">
               A full-stack Web and App developer passionate about building modern applications with 

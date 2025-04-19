@@ -108,8 +108,9 @@ export default function Contact() {
           <CardHeader>
             <CardTitle>Send a Message</CardTitle>
             <CardDescription>
-              Fill out the form below and I'll get back to you as soon as possible.
+              Fill out the form below and I&apos;ll get back to you as soon as possible.
             </CardDescription>
+
           </CardHeader>
           <CardContent>
             <form className="space-y-6" onSubmit={handleSubmit}>
