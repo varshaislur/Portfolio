@@ -21,13 +21,7 @@ export interface Project {
   isMobileProject?: boolean; // Flag for mobile projects
 }
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
-
-export default function ProjectDetail({ params }: Props) {
+export default function ProjectDetail({ params }: { params: { id: string } }) {
   const [projectsData, setProjectsData] = useState<Project[]>([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const projectId = parseInt(params.id);
