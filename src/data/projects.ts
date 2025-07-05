@@ -89,6 +89,31 @@ export const projects: Project[] = [
   isMobileProject: false
 },
 {
+  id: 7,
+  title: "MusicSpace",
+  description: "A collaborative music listening platform",
+  longDescription: "a Next.js app for real-time, community-based music listening. Space admins add YouTube tracks with auto-fetched metadata, users join spaces to engage and upvote songs. Implemented a dynamic voting system toinfluence the track queue and enhance collaborative listening experiences.",
+  tags: ["React", "Socket.io", "Monaco"],
+  image: "/images/musicspace5.png",
+  images: [
+   "/images/musicspace.png",
+   "/images/musicspace2.png",
+   "/images/musicspace3.png",
+   "/images/musicspace4.png",
+   "/images/musicspace5.png",
+   "/images/musicspace6.png",
+  ],
+  githubUrl: "https://github.com/varshaislur/MusicSpace",
+  liveUrl: "",
+  features: [
+    "Real-time collaborative coding",
+    "Multi-language support",
+    "Syntax highlighting",
+  ],
+  challenges: "Managing real-time collaboration without latency issues.",
+  isMobileProject: false
+},
+{
   id: 4,
   title: "ShopCart",
   description: "A React-based e-commerce website with Flipkart product listings via web scraping.",
